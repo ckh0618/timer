@@ -1,5 +1,8 @@
 #include <MultiPointTimer.hpp>
 #include <algorithm>
+#include <numeric>
+
+
 
 namespace timer_util 
 {
