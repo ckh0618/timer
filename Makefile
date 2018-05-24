@@ -9,6 +9,7 @@ all:
 	g++ -fpic -c ${CXX_FLAGS} ${INC} ${LIB} ${LPATH} MultiPointTimerC.cc
 
 	gcc -shared -o libMultiPointTimer.so MultiPointTimerC.o  MultiPointTimer.o
+	ar rcs libMultiPointTimer.a MultiPointTimerC.o MultiPointTimer.o
 
 
 test : 
@@ -17,4 +18,4 @@ test :
 
 
 clean:
-	rm -rf *.o test_timer *.so test_timer_c
+	rm -rf *.o test_timer *.so test_timer_c *.a

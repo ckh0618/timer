@@ -26,15 +26,13 @@ int startMultiPointTimer ( TimerHandle aTimer, char * aPointName )
 {
     timer_util::MultiPointTimer* sTimer = (timer_util::MultiPointTimer*) aTimer; 
 
-    sTimer->Start ( aPointName );
-    return 0 ;
+    return sTimer->Start ( aPointName );
 
 }
 int endMultiPointTimer ( TimerHandle aTimer, char * aPointName)
 {
     timer_util::MultiPointTimer* sTimer = (timer_util::MultiPointTimer*) aTimer; 
-    sTimer->End ( aPointName );
-    return 0; 
+    return sTimer->End ( aPointName );
 }
 
 int getResultMultiPointTimer ( TimerHandle aTimer,  
